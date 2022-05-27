@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Escrow from './pages/Escrow';
 
+import './index.css';
+import ContextProvider from './contexts/ContextProvider';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Escrow />
+        <ContextProvider endpoint="https://api.devnet.solana.com" >
+        </ContextProvider>
+          <Escrow />
       </header>
     </div>
   );

@@ -8,7 +8,7 @@ export const Container = styled(Box)`
   display: grid;
   grid-auto-flow: column;
   background: rgb(0,0,0, 0.3);
-  border-radius: 4px;
+  border-radius: 16px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 `;
 
@@ -21,56 +21,44 @@ export const Wrap = styled.div`
 `;
 
 export const Label = styled.p`
-  font-family: var(--font-family-montserrat-semibold);
-  color: var(--white);
-  margin: .1rem 0 .5rem .5rem;
+  color: var(--text-primary);
+  margin: .1rem 0 .2rem .1rem;
+  font-weight: 500;
 `;
 
-export const InputBox = styled(Input)<{hasError?: boolean}>`
-  // border: 1px solid var(--mountain-meadow);
-  border-radius: 4px;
-  background: #f5f5f517;
-  border: 2px solid ${props => props.hasError ? "#EF2C2CD5" : "transparent"};
+export const InputBox = styled(Input)<{haserror?: boolean}>`
+  border-radius: 8px;
+  background: var(--tertiary-color);
+  border: 2px solid ${props => props.haserror ? "var(--error-color)" : "transparent"};
   text-decoration: none;
   outline: none;
   height: 50px;
-  color: #FFFFFF94;
+  color: var(--text-primary);
   padding-left: 1rem;
 `;
 
 
 export const Row = styled.div<{
-  gap?: string,
-  align?: string,
-  justify?: string,
-  items?: string,
-  w?: string,
-  h?: string
+  gap?: string;
+  align?: string;
+  justify?: string;
+  items?: string;
 }>`
   display: grid;
   grid-auto-flow: row;
-  grid-gap: ${props => props.gap ?? "0"};
-  align-items: ${props => props.align ?? "center"};
-  justify-items: ${props => props.justify ?? "null"};
-  justify-content: ${props => props.justify ?? "center"};
-  width: ${props => props.w ?? "100%"};
-  height: ${props => props.h ?? "100%"};
+  grid-gap: ${props => props.gap ?? '0'};
+  align-items: ${props => props.align ?? 'start'};
+  justfy-content: ${props => props.justify ?? 'start'};
+  justify-items: ${props => props.items ?? 'none'};
 `;
 
-export const Col = styled.div<{
-  gap?: string,
-  align?: string,
-  justify?: string,
-  items?: string,
-  w?: string,
-  h?: string
-}>`
+export const Col = styled.div<{gap?: string, pl?: string, pr?: string, items?: string, justify?: string,align?: string}>`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: ${props => props.gap ?? "0"};
-  align-items: ${props => props.align ?? "center"};
-  justify-items: ${props => props.justify ?? "null"};
-  justify-content: ${props => props.justify ?? "center"};
-  width: ${props => props.w ?? "100%"};
-  height: ${props => props.h ?? "100%"};
-`;
+  grid-gap: ${props => props.gap ?? '1rem'};
+  align-items: center;
+  padding-left: ${props => props.pl};
+  padding-right: ${props => props.pl};
+  justify-content: ${props => props.justify ?? 'start'};
+  justify-items: ${props => props.items ?? 'none'};
+`

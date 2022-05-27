@@ -1,0 +1,45 @@
+
+
+
+:root {
+  --primary-color: #ffa115;
+  --accent-color: rgb(173 35 220);
+  --accent-light: rgb(194 50 243 / 64%);
+  --tertiary-color: #89eea27d;
+  --text-primary: #e9fbec;
+  --text-secondary: #424141;
+  --bg-color: #b1cabd;
+  --card-color: #4000aa;
+  --error-color: #de2f2f;
+  --error-text: #B1CAB7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  border-radius: 8px;
+}
