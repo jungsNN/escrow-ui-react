@@ -4,7 +4,8 @@ Original guide can be found here:  [paul-schaaf/escrow-ui](https://github.com/pa
 
 UI for token swap from one user to another. Should be integrated with an escrow smart contract of your choice. Solana escrow smart contract guide and source code can be found here: [Programming on Solana - An Introduction](https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/)
 
-UI has been done but functionality is under construction ATM 🚧
+This app serves to build on top of the UI provided by the guide, via create-react-app.
+UI is complete, however wallet connection and functionality is under construction ATM 🚧
 
 ## Getting Started with Create React App
 
